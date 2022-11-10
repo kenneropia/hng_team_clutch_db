@@ -15,14 +15,14 @@ async function connectToCluster(uri) {
         console.log('Connected to Mongodb Atlas Cluster');
         const collection = mongoClient.db('team_clutch_db').collection('avatars');
 
-        console.log('Creating avatar')
         //create a new avatar
+        console.log('Creating avatar')
         await createAvatar(collection);
-        console.log('New Avatr created')
+        console.log('New Avatar created')
         
     }catch (error) {
         console.error('Connection to MongoDB Atlas failed',error);
-        //process.exit();
+
     }finally {
         mongoClient.close()
        }
