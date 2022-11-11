@@ -1,8 +1,15 @@
+# INDEX
+The index file is a script to connect to your mongo instance.
+
+
+**Ensure to have an env file that contains uri to connect to your instance of Mongo**
+
+# MODELS 
 The models are contained in the "model" folder.
 
-The test folder contains a file "create_avatar" which add a mock data to the db.
+# TEST
+The test folder contains scripts to add data to the collections as defined by the name.
 
-Adding data to other collections can be done in a similar fashion.
+<sub>"create_avatar" adds a mock data to the the avatars collection.</sub>
 
-## Ensure to have an env file that contains uri to connect to your instance of Mongo
 
