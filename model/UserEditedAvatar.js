@@ -16,6 +16,14 @@ const UserEditedAvatarSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Avatar'
     },
+            podcast_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Podcast'
+    },
+    user_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
  
      accessories:{
         hair_type: {
