@@ -5,6 +5,10 @@ const podcastSchema = new Schema({
     file_path: {
         type: String,
         required: true
+    },  
+    user_id: {
+        type: String,
+        required: true
     },
 })
 
