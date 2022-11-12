@@ -6,6 +6,10 @@ const hairtypeSchema = new Schema({
     style: {
         type: String,
         required: true
+    }, 
+    type: {
+        type: String,
+        required: true
     },
     color: {
         type: String,
