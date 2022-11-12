@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
 
+// added required to be true for user_id collection here
 const speakerSchema = new Schema({
     file_path: {
         type: String,
@@ -14,7 +15,8 @@ const speakerSchema = new Schema({
 
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'User',
+        required: true
     },
  
 })
