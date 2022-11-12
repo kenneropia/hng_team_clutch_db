@@ -15,7 +15,11 @@ const avatarSchema = new Schema({
         required: true,
         enum: ['male','female']
     },
-    accessories:{
+  file_path:{
+  type: String,
+      required:true
+  },
+  accessories:{
         hair_type: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Hairtype',
