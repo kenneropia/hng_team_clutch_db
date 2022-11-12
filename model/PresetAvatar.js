@@ -22,12 +22,12 @@ const avatarSchema = new Schema({
             ref: 'Hairtype',
             required: true
         },
-        skin_color: {
+        skin_type: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Skincolor',
             required: true
         },
-        cloth_color: {
+        cloth_type: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Clothcolor',
             required: true
