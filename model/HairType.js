@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
-
+//i removed name of hair, coz we already have type of hair
 const hairtypeSchema = new Schema({
 
     style: {
@@ -12,10 +12,6 @@ const hairtypeSchema = new Schema({
         required: true
     },
     color: {
-        type: String,
-        required: true
-    },
-    name: {
         type: String,
         required: true
     },
