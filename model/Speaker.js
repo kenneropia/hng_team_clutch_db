@@ -11,6 +11,12 @@ const speakerSchema = new Schema({
         ref: 'Podcast',
         required: true
     },
+
+    user_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
+ 
 })
 
 module.exports = mongoose.model('Speaker', speakerSchema);
