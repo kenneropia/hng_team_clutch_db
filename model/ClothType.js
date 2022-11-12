@@ -19,4 +19,4 @@ const clothcolorSchema = new Schema({
     },
 })
 
-module.exports = mongoose.model('Clothcolor', clothcolorSchema);
+module.exports = mongoose.model('Clothtype', clothcolorSchema);
