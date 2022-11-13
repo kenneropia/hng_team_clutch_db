@@ -1,12 +1,54 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
 
-
-//added required to be true for all id documents here including gender. The ids would be set  in the node script
-// i removed the extra-layer to access the contents of accessories, so you're short of one traversal when accessing accessories after population 
-// added speaker model
+//added skin model and removed skin-type as skin-colour is already there, removed skin-style aswell.
+//changed name model to avatar-name
+//removed hair-type 'coz we already have hair-style, which already caters for every type of hair(afro,blond,red-haired)
+//removed cloth-type 'coz we already have cloth-style, which already caters for every type of cloth(short-sleeved,long,round-neck,armless...)
+//removed hairtype,clothtype and skintype model id's since we already have the collections here.
+//removed preset-id, 'coz prompting would to create an avatar would only show when a creator decides to create an avatar.
+// to get id of the podcast needed to be attached to the avatar, user needs to click on the podcasts...
+//...collection already stored and displayed on the front-end
+// you can change the podcast attached to former avatar you have created here too
 const UserEditedAvatarSchema = new Schema({
-        name: {
+    skincolor: {
+        type: String,
+        required: true
+    },
+    
+    skin_file_path: {
+        type: String,
+        required: true
+    },
+
+    hairstyle: {
+        type: String,
+        required: true
+    }, 
+    haircolor: {
+        type: String,
+        required: true
+    },
+    hair_file_path: {
+        type: String,
+        required: true
+    },
+
+    clothcolor: {
+        type: String,
+        required: true
+    }, 
+    clothstyle: {
+        type: String,
+        required: true
+    },
+    
+    cloth_file_path: {
+        type: String,
+        required: true
+    },
+
+   Avatarname: {
         type: String,
         required: true
     },
@@ -17,32 +59,8 @@ const UserEditedAvatarSchema = new Schema({
         enum: ['male','female'],
         required:true
     },
-        hair_type: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Hairtype',
-            required: true
-        },
-        skin_type: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Skincolor',
-            required: true
-        },
-        cloth_type: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Clothcolor',
-            required: true
-    },
-    selected_preset_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Avatar',
-        required:true
-    },
-    speaker_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Speaker',
-        required:true
-    },
-            podcast_id: {
+
+  podcast_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Podcast',
         required:true
