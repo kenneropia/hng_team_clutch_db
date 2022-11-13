@@ -10,7 +10,7 @@ const Schema = mongoose.Schema;
 // to get id of the podcast needed to be attached to the avatar, user needs to click on the podcasts...
 //...collection already stored and displayed on the front-end
 // you can change the podcast attached to former avatar you have created here too
-// added timing key-value pair as an array 'coz a character might have varying times to talk in a particular podcast
+// added character_duration key-value pair as an array 'coz a character might have varying times to talk in a particular podcast
 const UserEditedAvatarSchema = new Schema({
     skincolor: {
         type: String,
@@ -54,7 +54,7 @@ const UserEditedAvatarSchema = new Schema({
         required: true
     },
 
-    timing:[{
+    character_duration:[{
         start: String,
         end: String,
         required: true
