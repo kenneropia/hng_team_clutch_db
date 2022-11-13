@@ -13,7 +13,11 @@ const IdSchema = new Schema({
             type:String,
         }
     ],
-  
+    user_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required:true
+    },
  
    
 })
