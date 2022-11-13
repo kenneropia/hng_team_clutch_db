@@ -32,11 +32,7 @@ const UserEditedAvatarSchema = new Schema({
             ref: 'Clothcolor',
             required: true
     },
-    selected_preset_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Avatar',
-        required:true
-    },
+
     speaker_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Speaker',
