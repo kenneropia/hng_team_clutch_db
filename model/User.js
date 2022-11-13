@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 
 //first of all you have a prompt to create an account where your name and user_id gets saved on your local storage...
-//...the user_id is then in-turn used to find your speaker collection,podcast collection and 
+//...the user_id is then in-turn used to find your speaker collection,podcast collection etc..
 const UserSchema = new Schema({
         name: {
         type: String,
