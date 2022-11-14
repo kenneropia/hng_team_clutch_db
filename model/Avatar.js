@@ -17,21 +17,48 @@ const UserEditedAvatarSchema = new Schema({
         enum: ['male','female','neutral'],
         required:true
     },
-        hair_type: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Hairtype',
-            required: true
-        },
-        skin_type: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Skincolor',
-            required: true
-        },
-        cloth_type: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Clothcolor',
-            required: true
+    skincolor: {
+        type: String,
+        required: true
     },
+    
+    skin_file_path: {
+        type: String,
+        required: true
+    },
+
+    hairstyle: {
+        type: String,
+        required: true
+    }, 
+    haircolor: {
+        type: String,
+        required: true
+    },
+    hair_file_path: {
+        type: String,
+        required: true
+    },
+
+    clothcolor: {
+        type: String,
+        required: true
+    }, 
+    clothstyle: {
+        type: String,
+        required: true
+    },
+    
+    cloth_file_path: {
+        type: String,
+        required: true
+    },
+
+    character_duration:[{
+        start: String,
+        end: String,
+        required: true
+    }],
 
     speaker_id: {
         type: mongoose.Schema.Types.ObjectId,

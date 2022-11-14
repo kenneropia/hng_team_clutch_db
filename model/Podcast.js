@@ -17,6 +17,11 @@ const podcastSchema = new Schema({
         required: true
     
     },
+    speaker_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Speaker',
+    
+    },
 })
 
 module.exports = mongoose.model('Podcast', podcastSchema);
