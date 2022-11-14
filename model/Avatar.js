@@ -14,7 +14,7 @@ const UserEditedAvatarSchema = new Schema({
     gender: {
         type: String,
         required: true,
-        enum: ['male','female','neutral],
+        enum: ['male','female','neutral'],
         required:true
     },
         hair_type: {
